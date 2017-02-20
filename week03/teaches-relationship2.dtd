@@ -1,0 +1,6 @@
+<!--relation attributes represented as XML attributes-->
+<!ELEMENT teaches-relationship  (teaches*)>
+<!ELEMENT teaches		        (EMPTY)>
+<!ATTLIST teaches
+        course      CDATA #REQUIRED
+        lecturer    CDATA #REQUIRED>

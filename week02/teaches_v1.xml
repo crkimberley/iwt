@@ -1,0 +1,10 @@
+<teaches-relationship>
+    <teaches>
+        <course>SDP</course>
+        <lecturer>Keith Mannock</lecturer>
+    </teaches>
+    <teaches>
+        <course>DKM</course>
+        <lecturer>Nigel Martin</lecturer>
+    </teaches>
+</teaches-relationship>

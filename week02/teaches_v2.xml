@@ -1,0 +1,4 @@
+<teaches-relationship>
+    <teaches course="SDP" lecturer="Keith Mannock"/>
+    <teaches course="DKM" lecturer="Nigel Martin"/>
+</teaches-relationship>

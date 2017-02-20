@@ -1,0 +1,5 @@
+<!--relation attributes represented as elements-->
+<!ELEMENT teaches-relationship  (teaches*)>
+<!ELEMENT teaches		        (course, lecturer)>
+<!ELEMENT course	            (#PCDATA)>
+<!ELEMENT lecturer	            (#PCDATA)>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE exam SYSTEM "/Users/chris/x/iwt/week04/exam.dtd">
+<exam>
+    <code>SDP</code>
+    <title>Software Design and Programming</title>
+    <date>
+        <month>June</month>
+        <year>2017</year>
+    </date>
+    <questions>
+        <question>
+            <part>q1</part>
+        </question>
+        <question>
+            <part>q2</part>
+        </question>
+        <question>
+            <part>q3</part>
+        </question>
+        <question>
+            <part>q4</part>
+        </question>
+        <question>
+            <part>q5</part>
+        </question>
+    </questions>
+</exam>
