@@ -1,9 +1,9 @@
 <!ELEMENT exam		(code, title, date, questions)>
-        <!ELEMENT date		(month, year)>
-        <!ELEMENT questions	(question, question, question, question, question, question?)>
-        <!ELEMENT question	((part)+)>
-        <!ELEMENT part		(#PCDATA|part)*>
-        <!ELEMENT code 		(#PCDATA)>
-        <!ELEMENT title 	(#PCDATA)>
-        <!ELEMENT month 	(#PCDATA)>
-        <!ELEMENT year 		(#PCDATA)>
+<!ELEMENT date		(month, year)>
+<!ELEMENT questions	(question, question, question, question, question, question?)>
+<!ELEMENT question	((part)+)>
+<!ELEMENT part		(#PCDATA|part)*>
+<!ELEMENT code 		(#PCDATA)>
+<!ELEMENT title 	(#PCDATA)>
+<!ELEMENT month 	(#PCDATA)>
+<!ELEMENT year 		(#PCDATA)>
