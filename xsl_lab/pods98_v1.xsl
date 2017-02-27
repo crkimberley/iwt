@@ -2,7 +2,8 @@
 
     <xsl:template match="/">
         <html>
-            <head><h1><xsl:value-of select="proceedings/name"/></h1></head>
+            <head/>
+            <body><h1><xsl:value-of select="proceedings/name"/></h1></body>
         </html>
     </xsl:template>
 
