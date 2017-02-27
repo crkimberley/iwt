@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE matches [
+        <!ELEMENT matches   (match)+>
+        <!ELEMENT match     (team, team)>
+        <!ELEMENT team      (name, goals?, bookings?)>
+        <!ELEMENT name      (#PCDATA)>
+        <!ELEMENT goals     (goal)+>
+        <!ELEMENT bookings  (booking)+>
+        <!ELEMENT goal      (player, time)>
+        <!ELEMENT booking   (player, time)>
+        <!ELEMENT player    (#PCDATA)>
+        <!ELEMENT time      (#PCDATA)>
+        <!ATTLIST team ground (home | away) #REQUIRED>
+        <!ATTLIST booking card (yellow | red) "yellow">
+        <!ATTLIST goals scored CDATA "0">
+]>
+<matches>
+    <match>
+        <team ground="home">
+            <name>Wycombe</name>
+            <goals scored="2">
+                <goal>
+                    <player>Smith</player>
+                    <time>23</time>
+                </goal>
+                <goal>
+                    <player>Jones</player>
+                    <time>67</time>
+                </goal>
+            </goals>
+        </team>
+        <team ground="away">
+            <name>Spurs</name>
+            <goals scored="1">
+                <goal>
+                    <player>Murphy</player>
+                    <time>89</time>
+                </goal>
+            </goals>
+            <bookings>
+                <booking card="red">
+                    <player>Duncan</player>
+                    <time>75</time>
+                </booking>
+            </bookings>
+        </team>
+    </match>
+</matches>
+
+<!--There are many other alternatives. One could, for example, use an attribute
+on the goal element to indicate a penalty, rather than using a separate element.
+Instead of grouping all goals and all bookings under separate elements, one
+could change the content model of team to (name, (goal | penalty | booking)*),
+for example.-->

@@ -1,23 +1,33 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE stock [
-        <!ELEMENT stock (new-car, used-car)    >
-        <!ELEMENT new-car (model, price)>
-        <!ELEMENT used-car (model, price, mileage, (condition)?)>
-        <!ELEMENT model (#PCDATA)>
-        <!ELEMENT price (#PCDATA)>
-        <!ELEMENT mileage (#PCDATA)>
-        <!ELEMENT condition (#PCDATA)>
-        ]>
+<!ELEMENT stock     ((new-car | used-car)*)>
+<!ELEMENT new-car   (model, price)>
+<!ELEMENT used-car  (model, price, mileage, condition?)>
+<!ELEMENT model     (#PCDATA)>
+<!ELEMENT price     (#PCDATA)>
+<!ELEMENT mileage   (#PCDATA)>
+<!ELEMENT condition (#PCDATA)>
+]>
 
 <stock>
     <new-car>
         <model>Ford Focus</model>
-        <price>£20000</price>
+        <price>20000</price>
+    </new-car>
+    <new-car>
+        <model>Nissan Micra</model>
+        <price>11000</price>
     </new-car>
     <used-car>
         <model>Morris Minor</model>
-        <price>£1500</price>
+        <price>1500</price>
         <mileage>190000</mileage>
         <condition>poor</condition>
     </used-car>
 </stock>
+
+<!--Note that, because we want different content models for new cars and used
+cars, we have to use different element names for each. We might have preferred
+to use simply the element name car, with say an attribute giving the type (new
+or used), but then we would be required to have the same content model for both
+types. Some other schema languages do allow for this kind of flexibility.-->
