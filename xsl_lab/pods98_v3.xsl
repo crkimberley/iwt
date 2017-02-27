@@ -5,7 +5,7 @@
             <head/>
             <body>
                 <h1><xsl:value-of select="proceedings/name"/></h1>
-                <xsl:for-each select="proceedings/contents/article">
+                <xsl:for-each select="//article">
                     <p>
                         <xsl:for-each select="author">
                             <xsl:value-of select="."/>,
