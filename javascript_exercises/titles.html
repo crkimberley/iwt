@@ -3,7 +3,21 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Titles</title>
-    <script type="text/javascript" src="titles.js"></script>
+    <script type="text/javascript">
+		function getXML(url) {
+  		var xhr = new XMLHttpRequest();
+  		xhr.open("GET", url, false);
+  		xhr.send(null);
+  		return xhr.responseXML;}
+	</script>
 </head>
-<body onLoad="getTitles('rss-fragment.xml')"></body>
+<body>
+	<h1>TITLES from rss-fragment.xml</h1>
+	<script type="text/javascript">
+	var docXML = getXML("rss-fragment.xml");
+	var titleElements = docXML.getElementsByTagName("title");
+	for (i = 0; i < titleElements.length; i++)
+		document.write("<p>", titleElements.item(i).firstChild.nodeValue, "</p>");
+  </script>
+</body>
 </html>
