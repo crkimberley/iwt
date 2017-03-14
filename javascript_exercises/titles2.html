@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Titles</title>
+    <script type="text/javascript">
+		function getXML(url) {
+  		var xhr = new XMLHttpRequest();
+  		xhr.open("GET", url, false);
+  		xhr.send(null);
+  		return xhr.responseXML;}
+	</script>
+</head>
+<body>
+	<h1>TITLES from rss-fragment.xml</h1>
+	<script type="text/javascript">
+	var docXML = getXML("rss-fragment.xml");
+	var children = docXML.documentElement.children;
+	var channel = children.item(0);
+	var channelChildren = channel.children;
+	document.write("<p>", channelChildren.item(0).firstChild.nodeValue, "</p>");
+	document.write("<p>", channelChildren.item(8).childNodes[1].firstChild.nodeValue, "</p>");
+	document.write("<p>", channelChildren.item(9).childNodes[1].firstChild.nodeValue, "</p>");
+	document.write("<p>", channelChildren.item(10).childNodes[1].firstChild.nodeValue, "</p>");
+	document.write("<p>", channelChildren.item(11).childNodes[1].firstChild.nodeValue, "</p>");
+  </script>
+</body>
+</html>

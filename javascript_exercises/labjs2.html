@@ -1,0 +1,94 @@
+<html>
+<head>
+  <title> Compare 2 integers using a form </title>
+  <script type="text/javascript">
+  	function larger(x, y) {
+  		return parseInt(x) > parseInt(y) ? x : y;
+  	}
+  </script>
+</head>
+<body>
+<h1> Compare 2 integers using a form </h1>
+  <form>
+  	<table>
+  		<tr>
+  		<td>Enter 1st integer: </td>
+  		<td><input type="text" id="number1" size="24"/></td>
+  		</tr>
+  		<tr>
+  		<td>Enter 2nd integer: </td>
+  		<td><input type="text" id="number2" size="24"/></td>
+  		</tr>
+  		<tr>
+  		<td><input type="button" value="Larger of the two?"
+  		onClick="result.value=larger(number1.value, number2.value)"/></td>
+  		</tr>
+  		<tr>
+  		<td>Larger integer: </td>
+  		<td><input type="text" id="result" size="24"/></td>
+  		</tr>
+  	</table>
+  </form>
+</body>
+</html>
+
+<!--
+ALTERNATIVE SOLUTION 1
+...
+<tr>
+  <td></td>
+  <td><input type="button" value="Determine larger"
+        onClick="this.form.result.value=larger(num1.value, num2.value)" /></td>
+</tr>
+<tr>
+  <td>The larger integer is:</td>
+  <td><input type="text" name="result" size="15" /></td>
+</tr>
+...
+
+
+ALTERNATIVE SOLUTION 2
+<html>
+<head>
+<title>Sample Solution to JavaScript Lab Exercise 2</title>
+<script type = "text/javascript">
+   function larger(f) {
+      var x = f.num1.value;
+      var y = f.num2.value;
+      if (parseInt(x) > parseInt(y))
+            f.result.value = x;
+         else 
+            f.result.value = y;
+   }
+</script>
+</head>
+
+<body">
+<h1>Sample Solution to JavaScript Lab Exercise 2</h1>
+
+<form>
+<table>
+<tr>
+  <td>Enter first integer:</td>
+  <td><input type="text" name="num1" size="15" /></td>
+</tr>
+<tr>
+  <td>Enter second integer:</td>
+  <td><input type="text" name="num2" size="15" /></td>
+</tr>
+<tr>
+  <td></td>
+  <td><input type="button" value="Determine larger"
+        onClick="larger(this.form)" /></td>
+</tr>
+<tr>
+  <td>The larger integer is:</td>
+  <td><input type="text" name="result" size="15" /></td>
+</tr>
+</table>
+</form>
+
+</body>
+</html>
+
+-->

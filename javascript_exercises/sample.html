@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Sample Solution to JavaScript Lab Exercise 3</title>
+<script type="text/javascript">
+function loadXML(url) {
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", url, false);
+  xhr.send(null);
+  return xhr.responseXML;
+}
+</script>
+</head>
+<body>
+<h1>Sample Solution to JavaScript Lab Exercise 3</h1>
+<script type="text/javascript">
+   var xmlDoc = loadXML("pods98.xml");
+   var authorElements = xmlDoc.getElementsByTagName("author");
+   for ( i = 0; i < authorElements.length; i++ )
+      document.write("<p>", authorElements.item(i).firstChild.nodeValue, "</p>");      
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<head>
+<title> pods98 Authors </title>
+<script type="text/javascript">
+	function getXML(url) {
+  	var xhr = new XMLHttpRequest();
+  	xhr.open("GET", url, false);
+  	xhr.send(null);
+  	return xhr.responseXML;}
+</script>
+</head>
+<body>
+<h1> pods98 Authors </h1>
+<script type="text/javascript">
+	var docXML = getXML("pods98.xml");
+	var authorElements = docXML.getElementsByTagName("author");
+	for (i = 0; i < authorElements.length; i++)
+		document.write("<p>", authorElements.item(i).firstChild.nodeValue, "</p>");
+  </script>
+</body>
+</html>
+
+<!-- Method "item": Returns the indexth item in the collection -->

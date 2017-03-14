@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Using the XMLHttpRequest object</h2>
+
+<button type="button" onclick="titles()">Get RSS fragment</button>
+
+<p id="demo"></p>
+
+<script>
+function titles() {
+	var docXML = loadXMLDoc();
+	var kids = docXML.documentElement.children;
+	var x = "number of children = " + kids.length;
+
+	/*var titleString = "DUMMY"
+	for (var i = 0; i < titleElements.length; i++) {
+		titleString += titleElements[i].firstChild.nodeValue;
+	}*/
+	document.getElementById("demo").innerHTML = x;
+}
+
+function loadXMLDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("GET", "rss-fragment.xml", false);
+  xhttp.send(null);
+  return xhttp.responseXML;
+}
+
+function getTitles(xhttp) {
+	//var titleElements = xhttp.getElementsByTagName("title");
+	var titleString = "DUMMY"
+	/*for (var i = 0; i < titleElements.length; i++) {
+		titleString += titleElements[i].firstChild.nodeValue;
+	}*/
+	return titleString;
+}
+</script>
+
+</body>
+</html>

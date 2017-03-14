@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<rss version="2.0">
+<channel>
+	<title>BBC News | News Front Page | UK Edition</title>
+	<link>http://news.bbc.co.uk/go/rss/-/1/hi/default.stm</link>
+	<description>Visit BBC News for up-to-the-minute news, breaking news, video, audio and feature stories. BBC News provides trusted World and UK news as well as local and regional perspectives. Also entertainment, business, science, technology and health news.</description>
+	<language>en-gb</language>
+	<lastBuildDate>Tue, 14 Feb 2006 10:03:58 GMT</lastBuildDate>
+	<copyright>Copyright: (C) British Broadcasting Corporation, see http://news.bbc.co.uk/1/hi/help/rss/4498287.stm for terms and conditions of reuse</copyright>
+	<docs>http://www.bbc.co.uk/syndication/</docs>
+	<ttl>15</ttl>
+	<image>
+		<title>BBC News</title>
+		<url>http://news.bbc.co.uk/nol/shared/img/bbc_news_120x60.gif</url>
+		<link>http://news.bbc.co.uk</link>
+	</image>
+				
+<item>
+	<title>Policewoman shot during burglary</title>
+	<description>A 25-year-old female Pc is in a serious condition after being shot as she attended a burglary in Nottingham.</description>
+	<link>http://news.bbc.co.uk/go/rss/-/1/hi/england/nottinghamshire/4711268.stm</link>
+	<guid isPermaLink="false">http://news.bbc.co.uk/1/hi/england/nottinghamshire/4711268.stm</guid>
+	<pubDate>Tue, 14 Feb 2006 10:00:19 GMT</pubDate>
+	<category>Nottinghamshire</category>
+</item>
+<item>
+	<title>Lebanon marks Hariri anniversary</title>
+	<description>Thousands of people gather in Beirut to mark one year since the assassination of ex-Prime Minister Rafik Hariri.</description>
+	<link>http://news.bbc.co.uk/go/rss/-/1/hi/world/middle_east/4710938.stm</link>
+	<guid isPermaLink="false">http://news.bbc.co.uk/1/hi/world/middle_east/4710938.stm</guid>
+	<pubDate>Tue, 14 Feb 2006 09:57:26 GMT</pubDate>
+	<category>Middle East</category>
+</item>
+<item>
+        <title>MPs to vote on full smoking ban</title>
+        <description>MPs are to vote on whether to impose a total ban on smoking in pubs and clubs across England.</description>
+        <link>http://news.bbc.co.uk/go/rss/-/1/hi/uk_politics/4709258.stm</link>
+	<guid isPermaLink="false">http://news.bbc.co.uk/1/hi/uk_politics/4709258.stm</guid>
+	<pubDate>Tue, 14 Feb 2006 09:58:30 GMT</pubDate>
+	<category>Politics</category>
+</item>
+
+</channel>
+</rss>
+
