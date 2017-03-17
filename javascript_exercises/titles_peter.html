@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Titles</title>
+    <script type="text/javascript">
+        function getXML(url) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", url, false);
+            xhr.send(null);
+            return xhr.responseXML;}
+    </script>
+</head>
+<body>
+<h1>TITLES from rss-fragment.xml</h1>
+<table>
+    <script type="text/javascript">
+        var level1 = getXML("rss-fragment.xml").documentElement.childNodes;
+        for ( i = 0; i < level1.length; i++ ) {
+            if (level1[i].nodeName == "title") {
+                document.write("", level1[i].firstChild.nodeValue, "");
+            }
+            var level2 = level1[i].childNodes;
+            for ( j = 0; j < level2.length; j++ ) {
+                if (level2[j].nodeName == "title") {
+                    document.write("", level2[j].firstChild.nodeValue, "");
+                }
+                var level3 = level2[j].childNodes;
+                for ( k = 0; k < level3.length; k++ ) {
+                    if (level3[k].nodeName == "title") {
+                        document.write("", level3[k].firstChild.nodeValue, "");
+                    }
+                }
+            }
+        }
+    </script>
+</table>
+</body>
+</html>
