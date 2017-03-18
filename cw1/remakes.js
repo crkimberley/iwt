@@ -10,6 +10,14 @@ function getXML(myUrl) {
 function remakesTable() {
     var xmlDoc = getXML("remakes.xml");
     var stylesheet = getXML("remakes.xsl");
+    var title = document.getElementById("remakeTitle").value;
+    var year = document.getElementById("remakeYear").value;
+    var fraction = document.getElementById('fraction').value;
+    var titlePredicate = title ? "rtitle = '" + title + "'" : "*";
+    var yearPredicate = year ? "ryear > '" + year + "'" : "*";
+    var fractionPredicate = fraction ? "fraction > '" + fraction + "'" : "*";
+    var selection = "remake[" + titlePredicate + " and " + yearPredicate + " and " + fractionPredicate + "]";
+    $(stylesheet).find("xsl\\:for-each, for-each").attr("select", selection);
     if (typeof (XSLTProcessor) != "undefined") {
         var processor = new XSLTProcessor();
         processor.importStylesheet(stylesheet);

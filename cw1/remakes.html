@@ -7,10 +7,25 @@
     <script src="https://code.jquery.com/jquery-3.2.0.js"
             integrity="sha256-wPFJNIFlVY49B+CuAIrDr932XSb6Jk3J1M22M3E2ylQ="
             crossorigin="anonymous"></script>
-    <style>th {text-align: left} h1 {text-align: center}</style>
+    <style> th {
+        text-align: left
+    }
+
+    h1 {
+        text-align: center
+    }</style>
 </head>
 <h1>Film Remakes</h1>
-<body onLoad="remakesTable()">
+<body>
+<form>
+    <label>Remake title:</label>
+    <input type="text" id="remakeTitle" />
+    <label>Remake year:</label>
+    <input type="text" id="remakeYear" />
+    <label>Fraction:</label>
+    <input type="text" id="fraction" />
+    <input type="button" value="Find films" onClick="remakesTable()"/>
+</form>
 <div id="tableLocation"></div>
 </body>
 </html>
