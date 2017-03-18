@@ -20,9 +20,17 @@
 <form>
     <label>Remake title:</label>
     <input type="text" id="remakeTitle" />
-    <label>Remake year:</label>
+    <label>Remake year:
+        <input type="radio" id="lessThanYear" name="year" value="lessThan"/><
+        <input type="radio" id="equalsYear" name="year" value="equals" checked="checked"/>=
+        <input type="radio" id="greaterThanYear" name="year" value="greaterThan"/>>
+    </label>
     <input type="text" id="remakeYear" />
-    <label>Fraction:</label>
+    <label>Fraction:
+        <input type="radio" id="lessThanFraction" name="fraction" value="lessThan"/><
+        <input type="radio" id="equalsFraction" name="fraction" value="equals"/>=
+        <input type="radio" id="greaterThanFraction" name="fraction" value="greaterThan"/>>
+    </label>
     <input type="text" id="fraction" />
     <input type="button" value="Find films" onClick="remakesTable()"/>
 </form>

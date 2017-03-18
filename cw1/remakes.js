@@ -8,14 +8,19 @@ function getXML(myUrl) {
 }
 
 function remakesTable() {
+    $('#tableLocation').empty();
     var xmlDoc = getXML("remakes.xml");
     var stylesheet = getXML("remakes.xsl");
     var title = document.getElementById("remakeTitle").value;
     var year = document.getElementById("remakeYear").value;
     var fraction = document.getElementById('fraction').value;
     var titlePredicate = title ? "rtitle = '" + title + "'" : "*";
-    var yearPredicate = year ? "ryear > '" + year + "'" : "*";
-    var fractionPredicate = fraction ? "fraction > '" + fraction + "'" : "*";
+    var yearOperator = $('input[type=radio][name=year]:checked').val();
+    var yearOp = yearOperator === "equals" ? "=" : (yearOperator === "lessThan" ? "<" : ">");
+    var yearPredicate = year ? "ryear " + yearOp + " '" + year + "'" : "*";
+    var fractionOperator = $('input[type=radio][name=fraction]:checked').val();
+    var fractionOp = fractionOperator === "equals" ? "=" : (fractionOperator === "lessThan" ? "<" : ">");
+    var fractionPredicate = fraction ? "fraction " + fractionOp + " '" + fraction + "'" : "*";
     var selection = "remake[" + titlePredicate + " and " + yearPredicate + " and " + fractionPredicate + "]";
     $(stylesheet).find("xsl\\:for-each, for-each").attr("select", selection);
     if (typeof (XSLTProcessor) != "undefined") {
