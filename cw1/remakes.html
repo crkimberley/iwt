@@ -16,11 +16,12 @@
     }</style>
 </head>
 <h1>Film Remakes</h1>
-<body>
+<body onLoad=$("#sameAsOriginal").button()>
 <form>
-    <label>Remake title:
+    <label for="sameAsOriginal">Remake title:
         <input type="radio" id="titleEquals" name="title" value="equals" checked="checked"/>=
         <input type="radio" id="titleContains" name="title" value="contains"/>contains
+        <input type="checkbox" id="sameAsOriginal"/>
     </label><br/>
     <input type="text" id="remakeTitle" /><br/>
     <label>Remake year:
