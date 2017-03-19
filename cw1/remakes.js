@@ -11,17 +11,23 @@ function remakesTable() {
     $('#tableLocation').empty();
     var xmlDoc = getXML("remakes.xml");
     var stylesheet = getXML("remakes.xsl");
+
     var title = document.getElementById("remakeTitle").value;
     var year = document.getElementById("remakeYear").value;
     var fraction = document.getElementById('fraction').value;
-    var titlePredicate = title ? "rtitle = '" + title + "'" : "*";
+
+    var titleOperator = $('input[type=radio][name=title]:checked').val();
+    var titlePredicate = !title ? "*" : titleOperator === "equals" ? "rtitle = '" + title + "'" : "contains(rtitle, '" + title + "')";
+
     var yearOperator = $('input[type=radio][name=year]:checked').val();
     var yearOp = yearOperator === "equals" ? "=" : (yearOperator === "lessThan" ? "<" : ">");
     var yearPredicate = year ? "ryear " + yearOp + " '" + year + "'" : "*";
+
     var fractionOperator = $('input[type=radio][name=fraction]:checked').val();
     var fractionOp = fractionOperator === "equals" ? "=" : (fractionOperator === "lessThan" ? "<" : ">");
     var fractionPredicate = fraction ? "fraction " + fractionOp + " '" + fraction + "'" : "*";
-    var selection = "remake[" + titlePredicate + " and " + yearPredicate + " and " + fractionPredicate + "]";
+
+    var selection = "remake[" + titlePredicate + "][" + yearPredicate + "][" + fractionPredicate + "]";
     $(stylesheet).find("xsl\\:for-each, for-each").attr("select", selection);
     if (typeof (XSLTProcessor) != "undefined") {
         var processor = new XSLTProcessor();
