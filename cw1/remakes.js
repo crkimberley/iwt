@@ -17,7 +17,8 @@ function remakesTable() {
     var fraction = document.getElementById('fraction').value;
 
     var titleOperator = $('input[type=radio][name=title]:checked').val();
-    var titlePredicate = !title ? "*" : titleOperator === "equals" ? "rtitle = '" + title + "'" : "contains(rtitle, '" + title + "')";
+    var titlePredicate = !title ? "*" : titleOperator === "equals" ? "rtitle = '" + title + "'" :
+            "contains(rtitle, '" + title + "')";
 
     var yearOperator = $('input[type=radio][name=year]:checked').val();
     var yearOp = yearOperator === "equals" ? "=" : (yearOperator === "lessThan" ? "<" : ">");
